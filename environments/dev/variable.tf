@@ -2,7 +2,7 @@
 variable "aws_region" {
   description = "AWS region"
   type        = string
-  default     = "ap-southeast-2"
+  default     = "ap-southest-2"
 }
 
 variable "project_name" {
@@ -40,25 +40,25 @@ variable "eks_cluster_version" {
 variable "eks_node_instance_types" {
   description = "EKS node instance types"
   type        = list(string)
-  default     = ["m5.large"]
+  default     = ["t3.medium"]
 }
 
 variable "eks_node_desired" {
   description = "Desired EKS nodes"
   type        = number
-  default     = 3
+  default     = 2
 }
 
 variable "eks_node_max" {
   description = "Max EKS nodes"
   type        = number
-  default     = 4
+  default     = 3
 }
 
 variable "eks_node_min" {
   description = "Min EKS nodes"
   type        = number
-  default     = 2
+  default     = 1
 }
 
 variable "asg_ami_id" {
@@ -69,25 +69,25 @@ variable "asg_ami_id" {
 variable "asg_instance_type" {
   description = "Instance type for ASG"
   type        = string
-  default     = "m5.large"
+  default     = "t3.micro"
 }
 
 variable "asg_desired" {
   description = "Desired ASG instances"
   type        = number
-  default     = 3
+  default     = 1
 }
 
 variable "asg_max" {
   description = "Max ASG instances"
   type        = number
-  default     = 6
+  default     = 2
 }
 
 variable "asg_min" {
   description = "Min ASG instances"
   type        = number
-  default     = 2
+  default     = 1
 }
 
 variable "key_name" {
