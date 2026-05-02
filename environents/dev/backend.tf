@@ -1,7 +1,7 @@
 
 terraform {
   backend "s3" {
-    bucket         = "my-terraform-state-dev"
+    bucket         = "my-terraform-state-dev-yamuna"
     key            = "dev/terraform.tfstate"
     region         = "ap-southeast-2"
     encrypt        = true
